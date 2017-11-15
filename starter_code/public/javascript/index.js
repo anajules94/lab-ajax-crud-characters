@@ -1,8 +1,7 @@
-const charactersAPI = new APIHandler("http://ih-crud-api.herokuapp.com")
-
+const charactersAPI = new APIHandler("http://ih-crud-api.herokuapp.com");
 $(document).ready( () => {
-  $('#fetch-all').on('click', (e) => {
-
+  $('#fetch-all').on('click', () => {
+    charactersAPI.getFullList("/characters");
   })
 
   $('#fetch-one').on('click', (e) => {
